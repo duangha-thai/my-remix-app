@@ -43,6 +43,15 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <hr className="m-4"/>
+      <h1 className="text-3xl">My Profile</h1>
+      <ul className="list-disc mt-4 pl-6 space-y-2">
+        
+        <li>Name : Duanghathai Yarangpai</li>
+        <li>Class : Informmation Technology </li>
+        <li>E-mail : <a href="mailto:Duanghathai_yar@rmutto.ac.th">Contact me.</a></li>
+        <li> <img src="img/01.jpg" alt="duang" /></li>
+      </ul>
     </div>
   );
 }
