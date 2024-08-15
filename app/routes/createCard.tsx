@@ -124,7 +124,7 @@ export default function CreateCard() {
                                         onClick={() => handleViewDetails(card)}
                                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-md"
                                     >
-                                        ดูรายละเอียด
+                                        รายละเอียด
                                     </button>
                                 </td>
                             </tr>
@@ -133,29 +133,8 @@ export default function CreateCard() {
                 </table>
             </div>
 
-            {showPopup && selectedCard && (
-                <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg w-80">
-                        <h3 className="text-xl font-semibold mb-4">รายละเอียดนามบัตร</h3>
-                        <p><strong>ID:</strong> {selectedCard.id}</p>
-                        <p><strong>Name:</strong> {selectedCard.name}</p>
-                        <p><strong>Address:</strong> {selectedCard.note}</p>
-                        <p><strong>Telephone Number:</strong> {selectedCard.tel}</p>
-                        <p><strong>Picture:</strong></p>
-                        {selectedCard.image ? (
-                            <img src={selectedCard.image} alt={`Card ${selectedCard.id}`} className="w-full h-48 object-cover rounded-md mb-4" />
-                        ) : (
-                            <p>No image available</p>
-                        )}
-                        <button 
-                            onClick={handleClosePopup} 
-                            className="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md"
-                        >
-                            Close
-                        </button>
-                    </div>
-                </div>
-            )}
+           
+            <a href="/" className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">ย้อนกลับ</a>
         </div>
     );
 }

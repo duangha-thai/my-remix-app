@@ -7,7 +7,9 @@ function IsMember({ id, act }: { id: number, act: boolean }) {
     return <span key={id}>  ❌ Member Only! </span>
 }
 
-function Profiles({ id, nam, bio, bgp, imgu, usrn, cdat, act }: { id: number, nam: string, bio: any, bgp: string, imgu: string, usrn: string, cdat: string, act: boolean }) {
+function Profiles({ id, nam, bio, bgp, imgu, usrn, cdat, act }: 
+  { id: number, nam: string, bio: any, bgp: string, imgu: string, usrn: string, cdat: string, act: boolean , }) 
+  {
 
   return (
     <div key={id} className="max-w-sm w-full lg:max-w-full lg:flex justify-center">
@@ -30,6 +32,7 @@ function Profiles({ id, nam, bio, bgp, imgu, usrn, cdat, act }: { id: number, na
             <p className="text-gray-900 leading-none">{usrn}</p>
             <p className="text-gray-600">{cdat}</p>
           </div>
+          <a href={`/viewcard/${id}`} className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-3 py-2 text-sm font-medium text-center dark:focus:ring-yellow-900">view</a>
         </div>
       </div>
     </div>
@@ -72,7 +75,6 @@ export default function MyCards() {
     // alert("After, handleClickNonAct -->"+ active);
 
   }
-
   return (
     <div className="m-3 bg-amber-100 p-40">
       <h1 className="text-3xl font-bold">My Cards:{name}</h1>
